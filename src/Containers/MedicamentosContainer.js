@@ -6,23 +6,10 @@ import "./styles.css";
 import HeaderComponent from "../Components/General/HeaderComponent";
 import SidebarComponent from "../Components/General/SidebarComponent";
 import TablaComponent from "../Components/General/TablaComponent";
-import AlertaComponent from "../Components/General/AlertaComponent";
+import ServiciosComponent from "../Components/Servicios/ServiciosComponent";
+import MedicamentosComponent from "../Components/Medicamentos/MedicamentosComponent";
 
-const InicioContainer = (props) => {
-  const [open, setOpen] = React.useState(false);
-  const handleClickOpen = () => {
-    console.log("click")
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-  const Alert = {
-    titulo: "Aplicación móvil",
-    texto: ["Lo invitamos a que descargue la aplicación móvil desde las tiendas oficiales. ","Si ya cuenta con la aplicación puede iniciar sesión con su usuario y contraseña."],
-    boton: "Ok"
-  }
+const MedicamentosContainer = (props) => {
   const table = {
     headers: ["ID", "Nombre", "Etiqueta", "Estado", "Fecha"],
     body: [
@@ -36,10 +23,11 @@ const InicioContainer = (props) => {
   const contenido = {
     title: "¿Cómo funciona?",
     content: [
-      "Esta aplicación conecta tu información de distintos servicios o aplicaciones para poder sugerirte alarmas de manera automática.",
-      "Usamos Inteligencia Artificial para procesar los datos y hacerte la mejor sugerencia posible.",
-      "De esta forma puedes estar tranquilo. No volverás a olvidar temas importantes.",
-      "Bienvenido a Tu Alarma.",
+      "Puedes conectar diferentes aplicaciones a Tu Alarma, esto con el fin de mejorar las sugerencias que realizamos.",
+      "Conectando Spotify, te podemos sugerir que sonidos puede tener tu alarma. Podemos variar de acuerdo a tu genero musical favorito.",
+      "Conectando Google, puedes sincronizar eventos del calendario y generar una alarma de manera automática.",
+      "Aplicaciones como Strava nos permiten sugerir momentos en los que puedes realizar tu actividad física favorita.",
+      "Déjanos sorprenderte!",
     ],
   };
   return (
@@ -53,7 +41,7 @@ const InicioContainer = (props) => {
           spacing={2}
         >
           <Grid item md={10} className="TablaContainer">
-            <h2>Historial de alarmas</h2>
+            <h2>Cargar fórmulas médicas</h2>
           </Grid>
         </Grid>
       </Box>
@@ -64,24 +52,19 @@ const InicioContainer = (props) => {
           alignItems="flex-start"
           spacing={2}
         >
-          <Grid item md={8} className="TablaContainer">
-            <TablaComponent
-              headers={table.headers}
-              body={table.body}
-            ></TablaComponent>
+          <Grid item md={8} className="MedicamentosContainer">
+            <div>
+              <h3>Arrastra la imagen de la fórmula médica</h3>
+              <MedicamentosComponent></MedicamentosComponent>
+            </div>
           </Grid>
           <Grid item md={2}>
-            <SidebarComponent contenido={contenido} container="Inicio" handleClickOpen={() => handleClickOpen()}></SidebarComponent>
+            <SidebarComponent contenido={contenido} container="Servicios"></SidebarComponent>
           </Grid>
         </Grid>
       </Box>
-      <AlertaComponent
-        content={Alert}
-        open={open}
-        handleClose={() => handleClose()}
-      ></AlertaComponent>
     </div>
   );
 };
 
-export default InicioContainer;
+export default MedicamentosContainer;

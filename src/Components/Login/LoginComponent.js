@@ -6,7 +6,8 @@ import { Link } from "react-router-dom";
 import "./styles.css";
 
 
-const LoginComponent = () => {
+const LoginComponent = (props) => {
+  const {handleClickOpen} = props
 
   return (
     <div>
@@ -24,7 +25,7 @@ const LoginComponent = () => {
       >
         <InputComponent label="Usuario" />
         <InputComponent label="Constraseña" />
-        <PrimaryButton name="Iniciar Sesión" link="home"/>
+        <PrimaryButton name="Iniciar Sesión" onClick={()=>handleClickOpen()}/>
         <Link to="/registro" relative="path">
         Registrarse
         </Link>
