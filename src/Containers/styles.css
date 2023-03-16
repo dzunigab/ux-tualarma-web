@@ -1,0 +1,85 @@
+
+.bgLogin, .bgRegistro{
+    background-image: url("../images/backlogin.png");
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    padding: 12em 2em 0;
+    align-items: start;
+    margin-top: 13em !important;
+    min-height: calc(100vh - 13em);
+}
+.bgRegistro{
+    padding: 9em 2em 0;
+}
+.bgLoginContainer {
+    background-image: url("../images/textura.png");
+    background-color: #BDC2FF;
+    height: 100%;
+}
+.logoLogin{
+    position: absolute;
+    width: 300px;
+    margin-left: calc(-300px/2);
+    top: 10em;
+}
+.Header{
+    background-image: url("../images/textura.png");
+    background-color: #BDC2FF;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.logoInicio{
+    text-align: left;
+}
+.logoPerfil{
+    text-align: right;
+}
+.logoInicio p{
+    margin: 0;
+    color: #E76E00;
+    text-align: left;
+    padding-left: 20px;
+}
+.logoPerfil p{
+    margin: 0;
+    color: #E76E00;margin-right: 10px;
+}
+.logoPerfil div{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.TextoSidebar{
+    text-align: left;
+}
+table.Table thead {
+    font-size: 20px;
+    background-color: #FFF9E4;
+    color: #1F1C00;
+}
+table.Table {
+    width: 100%;
+    border: 1px solid #353100;
+    border-collapse: collapse;
+}
+table.Table th {
+    padding: 20px 10px;
+    border: 1px solid #353100;
+    border-collapse: collapse;
+}
+table.Table td {
+    padding:  10px;
+    border: 1px solid #353100;
+    border-collapse: collapse;
+    color: #1F1C00
+}
+.TablaContainer h2{
+    text-align: left;
+}
+.colorLink{
+    color: #4A55B4; text-decoration: none;
+}
+.colorLink:hover{
+     text-decoration: underline;
+}
